@@ -100,8 +100,8 @@ module "ecs_service" {
       image = "public.ecr.aws/ecs-sample-image/amazon-ecs-sample:latest"
       port_mappings = [
         {
-          name          = local.container_name
-          containerPort = local.container_port
+          name          = "my-containername"
+          containerPort = "80"
           protocol      = "tcp"
         }
       ]
