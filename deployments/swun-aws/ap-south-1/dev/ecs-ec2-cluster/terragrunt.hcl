@@ -28,6 +28,7 @@ inputs = {
   container_port = "80"
   vpc_id = dependency.vpc.outputs.vpc_id
   public_subnets = dependency.vpc.outputs.public_subnets
+  private_subnets = dependency.vpc.outputs.private_subnets
   
 
   
