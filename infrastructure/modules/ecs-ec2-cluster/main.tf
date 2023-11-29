@@ -178,7 +178,7 @@ module "alb" {
   security_group_egress_rules = {
     all = {
       ip_protocol = "-1"
-      cidr_ipv4   = var.vpc_cidr_block
+      cidr_ipv4   = "10.0.0.0/16"
     }
   }
 
@@ -296,7 +296,7 @@ module "autoscaling" {
     AmazonSSMManagedInstanceCore        = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
   }
 
-  vpc_zone_identifier = var.vpc_zone_identifier #module.vpc.private_subnets
+  vpc_zone_identifier = ["subnet-0211a9cf9d4f5168a","subnet-03ee17749a50a6954"]#var.vpc_zone_identifier #module.vpc.private_subnets
   health_check_type   = "EC2"
   min_size            = 1
   max_size            = 5
