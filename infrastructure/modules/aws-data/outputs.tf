@@ -18,3 +18,8 @@ output "available_aws_availability_zones_zone_ids" {
   value       = data.aws_availability_zones.available.zone_ids
 }
 
+output "ec2-optimized-ami" {
+  description = "Filtered result of ec2 ECS optimized instance"
+  value = data.aws_ami.ecs_ami.id
+}
+
