@@ -1,0 +1,9 @@
+---
+client_name: demo
+project_name: red-monitoring
+aws_profile_name: swunmath # Credential profile
+state_bucket: tf-tg-state-lock
+dynamodb_table: state-lock
+state_bucket_region: us-east-1
+cidr: "10.0.0.0/16"
+cluster_name: "sample-cluster"
