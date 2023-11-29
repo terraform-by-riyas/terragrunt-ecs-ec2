@@ -26,10 +26,7 @@ inputs = {
   name = "my-ecs1"
   container_name = "nginx"
   container_port = "80"
-  vpc_id = dependency.vpc.outputs.vpc_id
-  public_subnets = dependency.vpc.outputs.public_subnets
-  vpc_cidr_block = dependency.vpc.outputs.vpc_cidr_block
-  vpc_zone_identifier = dependency.outputs.vpc.private_subnets
+  vpc_id = "vpc-0a816e782da079fc1"
   
 
     tags = {
