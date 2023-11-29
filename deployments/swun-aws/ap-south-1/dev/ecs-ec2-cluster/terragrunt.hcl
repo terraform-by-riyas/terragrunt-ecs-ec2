@@ -26,7 +26,8 @@ inputs = {
   name = "my-ecs1"
   container_name = "nginx"
   container_port = "80"
-  vpc_id = "vpc-0a816e782da079fc1"
+  vpc_id = dependency.vpc.outputs.vpc_id
+
   
 
     tags = {
